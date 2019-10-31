@@ -1,0 +1,106 @@
+mixin footerNavLink(link,text,descr)
+	li.footer-nav__item
+		a(href=link).footer-nav__link=text
+		if(descr)
+			span.footer-nav__descr=descr
+
+footer.footer
+	.footer-top
+		.container
+			.footer-callback
+				a(href="").footer-callback__link
+					+icon('wikipedia', 'footer-callback__icon')
+				.order-callback.footer-callback__order-callback
+					span.order-callback__description Звоните круглосуточно
+					a(href="tel:+74993348888").order-callback__phone +7 499 334-88-88
+					a(href="").order-callback__link Заказать звонок
+			.footer-main
+				.footer-nav
+					.footer-col
+						span.footer__title О нас
+						ul.footer-nav__list
+							+footerNavLink('','Оплата и доставка','')
+							+footerNavLink('','Гарантия','')
+							+footerNavLink('','Услуги по обработке металла','')
+							+footerNavLink('','Компания','')
+							+footerNavLink('','Контакты','связь с директором')
+					.footer-col
+						span.footer__title Каталог
+						ul.footer-nav__list
+							+footerNavLink('','Все для кровли','')
+							+footerNavLink('','Фасад','')
+							+footerNavLink('','Профастил','')
+							+footerNavLink('','Листовой прокат','')
+							+footerNavLink('','Рулонная сталь','')
+				.footer-col
+					.footer__block
+						span.footer__title Принимаем к оплате
+						.payment-types
+							ul.payment-types__list
+								li.payment-types__item
+									a(href="").payment-types__link
+										+icon('visa', 'payment-types__icon')
+								li.payment-types__item
+									a(href="").payment-types__link
+										+icon('mastercard', 'payment-types__icon')
+								li.payment-types__item
+									a(href="").payment-types__link
+										+icon('point-of-service', 'payment-types__icon')
+							a(href="").payment-types__service Оплата заказа онлайн			
+					.footer__block
+						.footer-action
+							span.footer-action__title Акции и спецпредложения
+							.action-tooltip
+								+icon('gift','action-tooltip__icon')
+								span.action-tooltip__text Cаморезы в подарок до 31 декабря
+				.footer-col
+					.footer-block
+						span.footer__title Контакты
+						.footer-contacts
+							+icon('location','footer-contacts__icon')
+							span.footer-contacts__title Офис
+							.footer-contacts__text 111033, Москва, ул.Золоторожский вал, д .11, стр. 9 
+								.contacts-popup
+									span.contacts-popup__toggle на карте
+									.contacts-popup__body
+										.contacts-popup__map#popup-contacts-office
+										.contacts-popup__info
+											.contacts-popup__close
+												+icon('close','contacts-popup__close-icon')
+											span.contacts-popup__title Центральный офис в Москве
+											span.contacts-popup__text 111033, Москва, ул.Золоторожский вал, д .11, стр. 9
+											.contacts-popup__block
+												span.contacts-popup__label Время работы
+												span-contactspopup__text пн-пт 9:00-18:00
+											.contacts-popup__qr
+												span.contacts-popup__text Для построения маршрута наведите камеру телефона на QR-код
+												img(src="i/content/qr.png" alt="QR-код").contacts-popup__qr-image
+					.footer-block
+						.footer-contacts
+							+icon('location','footer-contacts__icon')
+							span.footer-contacts__title Производство и склад
+							.footer-contacts__text Московская обл., Ленинский р-н, г. Видное, Северная видновская промзона, ФГУП "Комплекс"
+								.contacts-popup
+									span.contacts-popup__toggle на карте
+									.contacts-popup__body
+										.contacts-popup__map#popup-contacts-stock
+										.contacts-popup__info
+											.contacts-popup__close
+												+icon('close','contacts-popup__close-icon')
+											span.contacts-popup__title Производство и склад
+											span.contacts-popup__text Московская обл., Ленинский р-н, г. Видное, Северная видновская промзона, ФГУП "Комплекс"
+											.contacts-popup__block
+												span.contacts-popup__label Время работы
+												span-contactspopup__text пн-пт 9:00-18:00
+											.contacts-popup__qr
+												span.contacts-popup__text Для построения маршрута наведите камеру телефона на QR-код
+												img(src="i/content/qr.png" alt="QR-код").contacts-popup__qr-image
+	.footer-bottom
+		.container
+			.footer-bottom__line
+				span.copyright &copy; 2018 Завод Vidaron
+				a(href="").footer-bottom__link Политика конфиденциальности
+				a(href="").footer-bottom__link Карта сайта
+			.footer-bottom__line.footer-bottom__line--pad
+				p.footer-bottom__text Сайт Vidaron.com носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ГК РФ. 
+				p.footer-bottom__text Для получения подробной информации о наличии, видах, характеристиках и стоимости материалов, пожалуйста, обратитесь в офисы продаж.

@@ -1,0 +1,15 @@
+// Здесь подключаются все модули, которые затем импортятся на главый scss файл для конвертации в main.css
+
+@import "header/header.scss";
+@import "navigation/navigation.scss";
+@import "small-block/small-block.scss";
+@import "buttons/button.scss";
+@import "footer/footer.scss";
+@import "user/user.scss";
+@import "form/form.scss";
+@import "basket/basket.scss";
+@import "category/category.scss";
+@import "advantage/advantage.scss";
+@import "action/action.scss";
+@import "product/product.scss";
+@import "popups/popups.scss";

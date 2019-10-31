@@ -1,0 +1,34 @@
+.s{
+	
+	&-bg-white{
+		background-color: $main-color;
+	}
+
+	&-popular-categories{
+		padding-bottom: 10px;
+	}
+
+	&-sales-leaders{
+		padding-bottom: 20px;
+	}
+
+	&-question{
+		padding: 10px 0;
+	}
+}
+
+.section-header{
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+
+	&__right{
+		margin-left: auto;
+	}
+
+	&__link{
+		font-weight: bold;
+		color: $link-color;
+		text-decoration: underline;
+	}
+}

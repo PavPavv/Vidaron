@@ -1,0 +1,61 @@
+.actions-prev{
+	display: flex;
+
+
+	& > * {
+		flex: 1;
+
+		&:not(:last-child) {
+			margin-right: 30px;
+			@media (max-width: $tablet-size) {
+				margin-right: 20px;
+			}
+		}
+	}
+
+}
+
+.action-prev{
+	border-radius: 4px;
+	overflow: hidden;
+	transition: all linear .5s;
+	&:hover{
+		box-shadow: 0 0 9px 1px rgba(0,0,0,.2) ;
+	}
+	&.action-prev--tablet-hide{
+		@media (max-width: $tablet-size) {
+			display: none;
+		}
+	}
+
+	&__header{
+		display: flex;
+		align-items: flex-end;
+		height: 185px;
+		padding: 25px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__body{
+		height: 120px;
+		padding: 15px 20px;
+		background-color: $main-color;
+	}
+
+	&__text{
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__descr{
+		font-size: 16px;
+		font-weight: normal;
+	}
+
+	&__title{
+		font-size: 22px;
+		font-weight: bold;
+	}
+}

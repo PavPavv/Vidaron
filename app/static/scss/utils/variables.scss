@@ -1,0 +1,85 @@
+///////////////COLORS//////////////////////////////
+// Input colors
+$white: #ffffff;
+$darkWhite: #f5f5f5;
+
+$black: #000000;
+
+$darkGreen: #1fa349;
+$deepDarkGreen: #004033;
+$middleGreen: #1fa349;
+$darkestGreen: #002c2c;
+$brightGreen: #1fa349;
+
+$grayBg: #f2f2f2;
+$gray: #333333;
+$lightGray: #bababa;
+$superLightGray: #ededed;
+$mediumGray: #999797;
+$superLightGray: #dedede;
+
+$alarmRed: #ea102b;
+
+$yellowBright: #f8e71c;
+$yellowDark: #FFC300;
+$yellowSemi: #E3D311;
+
+
+// Output colors
+$main-color: $white;
+$second-color: $black;
+
+$corporate-color: $deepDarkGreen;
+$base-color: $gray;
+$main-bg-color: $grayBg;
+$light-bg-color: $darkWhite;
+
+$link-color: $darkGreen;
+$main-action-color: $yellowBright;
+
+$text-info-color: $lightGray;
+
+$input-border-color: $superLightGray;
+$btn-hover-color: $yellowSemi;
+$button-green-color: $brightGreen;
+$label-text-color: $mediumGray;
+$slider-dot-bg-color: $superLightGray;
+
+$icon-color: $middleGreen;
+
+$warning-color: $alarmRed;
+
+
+$advantage-color: $yellowDark;
+
+$footer-bg: $darkestGreen;
+
+
+//////////////FONTS////////////////////////////
+// Fonts
+$main-font: 'open_sansregular', 'Arial',sans-serif;
+
+// Font sizes
+$base-font-size: 14px;
+
+
+
+//////////////SIZES////////////////////////////////
+// Sizes
+$content-size: 1240px;
+$tablet-size: 1239px;
+$phone-size: 767px;
+
+
+
+//adaptive breakpoints cheat sheet
+$breakpoints: (
+	"phone"        : 400px,
+	"phone-wide"   : 480px,
+	"phablet"      : 560px,
+	"tablet-small" : 640px,
+	"tablet"       : 768px,
+	"tablet-wide"  : 1024px,
+	"desktop"      : 1248px,
+	"desktop-wide" : 1440px
+);

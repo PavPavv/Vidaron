@@ -1,0 +1,48 @@
+.popup{
+  position: relative;
+  max-width: 520px;
+  margin: 50px auto;
+  background-color: $main-color;
+
+  &__subtitle{
+      display: block;
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.44;
+    }
+
+  &__title{
+    font-size: 18px;
+    line-height: 1.44;
+    color: $base-color;
+  }
+
+  &__header{
+    display: flex;
+    align-items: center;
+    padding: 15px 25px 15px 40px;
+    background-color: $light-bg-color;
+  }
+
+  &__close{
+    @include size(25px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    cursor: pointer;
+    opacity: .2;
+    &:hover{
+      opacity: .6;
+    }
+
+    &-icon{
+      @include size(16px);
+    }
+  }
+
+  &__body{
+    padding: 40px;
+    background-color: $main-color;
+  }
+}

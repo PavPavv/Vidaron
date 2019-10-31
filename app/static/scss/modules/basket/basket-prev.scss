@@ -1,0 +1,55 @@
+.basket-prev{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	color: $main-color;
+
+	&__icon{
+		@include size(25px);
+		margin-bottom: 7px;
+		fill: $main-color;
+		@media (max-width: $tablet-size) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title{
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 20px;
+		@media (max-width: $tablet-size) {
+			display: none;
+		}
+	}
+
+	&__count{
+		font-size: 14px;
+		@media (max-width: $tablet-size) {
+			display: none;
+		}
+	}
+
+	&__number{
+		@include size(23px);
+		display: none;
+		position: absolute;
+		top: -12px;
+		right: -12px;
+		border-radius: 50%;
+		font-size: 12px;
+		line-height: 23px;
+		text-align: center;
+		background-color: $main-action-color;
+		color: $second-color;
+		@media (max-width: $tablet-size) {
+			display: block;
+		}
+		@media (max-width: $phone-size) {
+			@include size(16px);
+			font-size: 10px;
+			top: -8px;
+			right: -8px;
+			line-height: 16px;
+		}
+	}
+}

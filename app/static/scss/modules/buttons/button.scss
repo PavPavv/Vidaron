@@ -1,0 +1,59 @@
+.btn{
+	display: flex;
+	align-items: center;
+	padding: 8px 20px; 
+	border: 2px solid transparent;
+	border-radius: 4px;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 20px;
+	background-color: $main-action-color;
+	cursor: pointer;
+	&:hover{
+		background-color: $btn-hover-color;
+	}
+
+	& > * {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
+	&__icon{
+		@include size(25px);
+	}
+
+	&.btn{
+
+		&--fill{
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+
+		&--bg{
+			&-green{
+				color: $main-color;
+				background-color: $button-green-color;
+			}
+		}
+
+		&--border{
+			&-green{
+				color: $button-green-color;
+				border-color: $button-green-color;
+				background-color: $main-color;
+			}
+		}
+
+		&--size{
+			&-s{
+				padding: 3px 15px; 
+			}
+			&-l{
+				padding: 13px 30px;
+				font-size: 14px;
+			}
+		}
+	}
+}

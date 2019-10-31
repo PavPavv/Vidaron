@@ -1,0 +1,253 @@
+.location{
+	position: relative;
+	$locationWidth: 175px;
+	flex: 0 0 $locationWidth;
+	max-width: $locationWidth;
+	width: $locationWidth;
+
+	&__header{
+		position: relative;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+
+		& > * {
+			&:not(:last-child){
+				margin-right: 10px;
+			}
+		}
+	}
+
+	&__icon{
+		@include size(16px);
+		flex-shrink: 0;
+		fill: $base-color;
+	}
+
+	&__current{
+		display: block;
+		padding-right: 10px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+		& > * {
+			&:not(:last-child){
+				margin-right: 10px;
+			}
+		}
+		&:after{
+			position: absolute;
+			z-index: 1;
+			top: 9px;
+			right: 0;
+			content: '';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 4px 4.5px 0 4.5px;
+			border-color: #000000 transparent transparent transparent;
+			margin-left: 10px;
+		}
+	}
+
+	&__body{
+		&.is-location-choose{
+			@media (max-width: $phone-size) {
+				z-index: 3;
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				background-color: rgba(#003333, .4);
+			}
+
+			.location-choose{
+				display: flex;
+			}
+		}
+	}
+
+	&-question{
+		position: absolute;
+		z-index: 1;
+		display: flex; //displaying question-element
+		align-items: center;
+		left: 0;
+		top: calc(100% + 10px);
+		border-radius: 4px;
+		padding: 8px 10px;
+		box-shadow: 0 0 5px 0 rgba(159,197,178,.5);
+		background-color: $main-color;
+		@media (max-width: $tablet-size) {
+			max-width: 728px;
+		}
+		@media (max-width: $phone-size) {
+			flex-direction: column;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			top: auto;
+			max-width: 100%;
+			border: 2px solid $main-action-color;
+			padding: 10px 20px 20px;
+		}
+		& > * {
+			&:not(:last-child) {
+				margin-right: 15px;
+				@media (max-width: $phone-size) {
+					margin-right: 0;
+					margin-bottom: 10px;
+				}
+			}
+		}
+		&:before{
+			position: absolute;
+			left: 100px;
+			top: -9px;
+			content: '';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 10px 10px 10px;
+			border-color: transparent transparent #ffffff transparent;
+			@media (max-width: $phone-size) {
+				display: none;
+			}
+		}
+
+		&__buttons{
+			display: flex;
+			align-items: center;
+			white-space: nowrap;
+			& > * {
+				&:not(:last-child) {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		&__text{
+			font-size: 16px;
+			line-height: 1.44;
+			white-space: nowrap;
+			@media (max-width: $tablet-size) {
+				text-overflow: ellipsis;
+			}
+		}
+	}
+
+	&-choose{
+		position: absolute;
+		z-index: 1;
+		display: none;
+		top: 10px;
+		left: 20px;
+		width: 230px;
+		flex-direction: column;
+		box-shadow: 0 0 30px 0 rgba(0,0,0,.2);
+		border: 2px solid $main-action-color;
+		border-radius: 4px;
+		background-color: $main-color;
+		cursor: pointer;
+		@media (max-width: $phone-size) {
+			width: auto;
+			top: 60px;
+			right: 20px;
+			bottom: 30px;
+			left: 20px;
+		}
+
+		&__header{
+			border-bottom: 2px solid $main-action-color;
+		}
+
+		&__close{
+			@include size(30px);
+			position: absolute;
+			top: -40px;
+			right: 0;
+			display: none;
+			align-items: center;
+			justify-content: center;
+			@media (max-width: $phone-size) {
+				display: flex;
+			}
+
+			&-icon{
+				@include size(16px);
+				fill: $main-action-color;
+			}
+		}
+
+		&__list{
+			padding: 15px 0;
+			overflow: auto;
+			height: 100%;
+		}
+
+		&__item{
+			padding: 5px 15px;
+			line-height: 18px;
+			font-size: 14px;
+			transition: all linear .1s;
+			cursor: pointer;
+			&:hover{
+				background-color: $main-action-color;
+			}
+		}
+
+		&__body{
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			height: auto;
+			max-height: 240px;
+			@media (max-width: $phone-size) {
+				max-height: 100%;
+			}
+			&:after,
+			&:before{
+				position: absolute;
+				content: '';
+				display: block;
+				right: 0;
+				left: 0;
+				height: 30px;				
+			}
+			&:before{
+				top: 0;
+				background-image: linear-gradient(to bottom, #ffffff, rgba(255,255,255,0));
+				
+			}
+			&:after{
+				bottom: 0;
+				background-image: linear-gradient(to top, #ffffff, rgba(255,255,255,0));
+			}
+		}
+	}
+
+	&-mobile{
+		color: $link-color;
+
+		.location{
+
+			&__icon{
+				fill: $link-color;
+			}
+
+			&__current{
+				&:after{
+					display: none;
+				}
+			}
+
+			&-choose{
+				&__item{
+					color: $base-color;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+.advantages{
+	display: flex;
+
+	& > * {
+		flex: 1;
+		&:not(:last-child) {
+			margin-right: 30px;
+			@media (max-width: $tablet-size) {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+.advantage{
+	display: flex;
+
+	& > * {
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+
+	&__icon{
+		@include size(48px,70px);
+		fill: $advantage-color;
+	}
+
+	&__body{
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title{
+		font-size: 15px;
+		font-weight: bold;
+		margin-bottom: 8px;
+	}
+
+	&__text{
+		font-size: 14px;
+		letter-spacing: .25px;
+		color: $text-info-color;
+	}
+
+	&__link{
+		margin-top: 10px;
+		text-decoration: underline;
+		font-size: 13px;
+		letter-spacing: .25px;
+		font-family: 'oswaldbold';
+	}
+
+
+}

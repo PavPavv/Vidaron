@@ -1,0 +1,8 @@
+.product-prev-slider{
+	position: relative;
+	.slider-nav{
+		@media (max-width: $tablet-size) {
+			display: none!important;
+		}
+	}
+}

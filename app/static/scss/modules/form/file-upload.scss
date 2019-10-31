@@ -1,0 +1,28 @@
+.file-upload {
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+
+  input[type="file"] { display: none;}
+
+  &__custom {
+    display: flex;
+
+    & > * {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }    
+  }
+
+  &__icon{
+    @include size(16px);
+    fill: $button-green-color;
+  }
+
+  &__text{
+    font-size: 14px;
+    font-weight: bold;
+    color: $button-green-color;
+  }
+}

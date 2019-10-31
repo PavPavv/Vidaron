@@ -1,0 +1,33 @@
+.action-tooltip{
+	position: absolute;
+	top: calc(100% + 7px);
+	left: 0;
+	right: 0;
+	border-radius: 4px;
+	padding: 10px 15px 10px 30px;
+	background-color: $main-color;
+	&:before{
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 0;
+		top: -5px;
+		left: 15px;
+		border-style: solid;
+		border-width: 0 5px 5px 5px;
+		border-color: transparent transparent #ffffff transparent;
+	}
+
+	&__icon{
+		@include size(16px);
+		position: absolute;
+		top: 15px;
+		left: 8px;
+		fill: $button-green-color;
+	}
+
+	&__text{
+		font-size: 12px;
+		color: $base-color;
+	}
+}
